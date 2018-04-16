@@ -4,8 +4,7 @@ stages:
 push_to_github:
   stage: build
   script:
-    - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-    - git remote add github git@github.com:TribeOS/test.git
+    - ./setup_github_mirror git@github.com:TribeOS/test.git
     - git push -u github master
 #  only:
 #    - tags
