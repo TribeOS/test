@@ -1,10 +1,10 @@
 stages:
-  - build
+  - mirror
 
 push_to_github:
-  stage: build
+  stage: mirror
   script:
-    - ./setup_github_mirror git@github.com:TribeOS/test.git
+    - ./setup_github_mirror.sh git@github.com:TribeOS/test.git
     - git push -u github master
 #  only:
 #    - tags
