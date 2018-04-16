@@ -5,6 +5,6 @@ push_to_github:
   stage: mirror
   script:
     - ./setup_github_mirror.sh git@github.com:TribeOS/test.git
-    - git push -u github master
+    - git push -u github && git push -u github --tags
 #  only:
 #    - tags
