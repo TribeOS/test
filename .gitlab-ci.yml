@@ -1,0 +1,10 @@
+stages:
+  - build
+
+build_laravel:
+  stage: build
+  script:
+    - git remote add origin github git@github.com:TribeOS/test.git
+    - git push -u github master
+#  only:
+#    - tags
